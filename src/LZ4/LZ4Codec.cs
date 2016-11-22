@@ -49,13 +49,6 @@ namespace LZ4
 
 		// ReSharper disable InconsistentNaming
 
-		// mixed mode
-		private static ILZ4Service _service_MM32;
-		private static ILZ4Service _service_MM64;
-
-		// c++/cli
-		private static ILZ4Service _service_CC32;
-		private static ILZ4Service _service_CC64;
 
 		// unsafe c#
 		private static ILZ4Service _service_N32;
@@ -78,11 +71,7 @@ namespace LZ4
 			// are needed so we can safely try load and handle if not loaded
 			// I may change in future versions of .NET
 
-			if (Try(Has2010Runtime, false))
-			{
-				Try(InitializeLZ4mm);
-				Try(InitializeLZ4cc);
-			}
+
 			Try(InitializeLZ4n);
 			Try(InitializeLZ4s);
 
@@ -107,58 +96,35 @@ namespace LZ4
 			if (IntPtr.Size == 4)
 			{
 				encoder =
-					_service_MM32 ??
-					_service_MM64 ??
 					_service_N32 ??
-					_service_CC32 ??
 					_service_N64 ??
-					_service_CC64 ??
 					_service_S32 ??
 					_service_S64;
 				decoder =
-					_service_MM32 ??
-					_service_MM64 ??
-					_service_CC64 ??
-					_service_CC32 ??
 					_service_N64 ??
 					_service_N32 ??
 					_service_S64 ??
 					_service_S32;
 				encoderHC =
-					_service_MM32 ??
-					_service_MM64 ??
 					_service_N32 ??
-					_service_CC32 ??
 					_service_N64 ??
-					_service_CC64 ??
 					_service_S32 ??
 					_service_S64;
 			}
 			else
 			{
 				encoder =
-					_service_MM64 ??
-					_service_MM32 ??
 					_service_N64 ??
 					_service_N32 ??
-					_service_CC64 ??
-					_service_CC32 ??
 					_service_S32 ??
 					_service_S64;
 				decoder =
-					_service_MM64 ??
 					_service_N64 ??
 					_service_N32 ??
-					_service_CC64 ??
-					_service_MM32 ??
-					_service_CC32 ??
 					_service_S64 ??
 					_service_S32;
 				encoderHC =
-					_service_MM64 ??
-					_service_MM32 ??
-					_service_CC32 ??
-					_service_CC64 ??
+					
 					_service_N32 ??
 					_service_N64 ??
 					_service_S32 ??

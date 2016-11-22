@@ -61,22 +61,7 @@ namespace LZ4
 
 		// ReSharper disable InconsistentNaming
 
-		/// <summary>Initializes codecs from LZ4mm.</summary>
-		[MethodImpl(MethodImplOptions.NoInlining)]
-		private static void InitializeLZ4mm()
-		{
-			_service_MM32 = TryService<CppMM32LZ4Service>();
-			_service_MM64 = TryService<CppMM64LZ4Service>();
-		}
-
-		/// <summary>Initializes codecs from LZ4cc.</summary>
-		[MethodImpl(MethodImplOptions.NoInlining)]
-		private static void InitializeLZ4cc()
-		{
-			_service_CC32 = TryService<CppCC32LZ4Service>();
-			_service_CC64 = TryService<CppCC64LZ4Service>();
-		}
-
+	
 		/// <summary>Initializes codecs from LZ4n.</summary>
 		[MethodImpl(MethodImplOptions.NoInlining)]
 		private static void InitializeLZ4n()
