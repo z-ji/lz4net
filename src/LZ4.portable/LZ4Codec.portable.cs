@@ -40,11 +40,6 @@ namespace LZ4
 
 		// ReSharper disable InconsistentNaming
 
-		/// <summary>Initializes codecs from LZ4mm.</summary>
-		private static void InitializeLZ4mm() { _service_MM64 = _service_MM32 = null; }
-
-		/// <summary>Initializes codecs from LZ4cc.</summary>
-		private static void InitializeLZ4cc() { _service_CC64 = _service_CC32 = null; }
 
 		/// <summary>Initializes codecs from LZ4n.</summary>
 		[MethodImpl(MethodImplOptions.NoInlining)]
