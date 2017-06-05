@@ -1,8 +1,0 @@
-source https://www.nuget.org/api/v2/
-
-nuget DotNetZip.Reduced framework: net40
-nuget NUnit framework: net40
-
-nuget FAKE
-nuget LibZ.Tool
-nuget NUnit.Runners

@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup Label="Configuration">
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <DefineConstants>TRACE;DEBUG;NETSTANDARD1_6</DefineConstants>
+    <Optimize>True</Optimize>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetFramework>netstandard1.6</TargetFramework>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageId>zji.lz4.core</PackageId>
+    <Authors>Zefei Ji</Authors>
+    <Company />
+    <Product />
+    <Description>port from https://github.com/MiloszKrajewski/lz4net
+This project is a subset of https://github.com/MiloszKrajewski/lz4net and it is retargeted to dotnet core only and only the unsafe implementation is included.
+for more detail please go to https://github.com/MiloszKrajewski/lz4net .</Description>
+    <PackageLicenseUrl>https://github.com/z-ji/lz4net/blob/master/LICENSE.md</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/z-ji/lz4net</PackageProjectUrl>
+  </PropertyGroup>
+  
+</Project>
